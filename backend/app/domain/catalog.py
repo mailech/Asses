@@ -56,7 +56,7 @@ EXTENDED_STAY_DISCOUNT: Final = ExtendedStayDiscount(
     threshold=7, percent=Decimal("15")
 )
 
-CURRENCY: Final = "USD"
+CURRENCY: Final = "INR"
 
 #: Longest sensible booking the office will accept without a manual override.
 MAX_NIGHTS: Final = 365

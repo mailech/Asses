@@ -26,11 +26,16 @@ export function roomLabel(room: RoomType, quantity = 1): string {
   return quantity === 1 ? singular : plural;
 }
 
-/** Format an amount the API sent as a decimal string, e.g. "7565.00". */
+/**
+ * Format an amount the API sent as a decimal string, e.g. "7565.00".
+ *
+ * The currency comes from the quote, never from here -- a bill raised under a
+ * different currency must still render in the one it was priced in.
+ */
 export function money(amount: string, currency: string): string {
   const value = Number(amount);
   if (!Number.isFinite(value)) return amount;
-  return new Intl.NumberFormat("en-US", {
+  return new Intl.NumberFormat("en-IN", {
     style: "currency",
     currency,
     minimumFractionDigits: 2,

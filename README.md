@@ -97,7 +97,7 @@ curl -X POST http://127.0.0.1:8000/accommodations \
     "warnings": []
   },
   "quote": {
-    "currency": "USD",
+    "currency": "INR",
     "nights": 10,
     "guests": 8,
     "meal_plan": "half_board",
